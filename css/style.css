@@ -1,6 +1,5 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    ;
 }
 
 :root {
@@ -10,10 +9,10 @@ body {
   --text-dark: #333333;
 }
 
-.navbar {
+/* .navbar {
   background-color: var(--primary);
   margin-bottom: 50px;
-}
+} */
 
 .btn-primary {
   background-color: var(--secondary);
@@ -36,23 +35,44 @@ body {
         rgba(0,0,0,0.65)
     ),
     url("../images/home.png") center center / cover no-repeat;
-}
+    padding-top: 85px;
+  }
 
 /* Navbar transparent now */
 .custom-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: transparent;
+    z-index: 9999;
+    background: orange;
+    /* backdrop-filter: blur(2px); */
+}
+.custom-navbar ul li a{
+  color: black !important;
 }
 
+.custom-navbar::before {
+  /* content: ""; */
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.65)
+    ),
+    url("../images/home.png") center / cover no-repeat;
+    background-position: center bottom;
+
+  opacity: 0.85;
+  z-index: -1;
+}
+.custom-navbar.scrolled::before {
+  background: #111;
+}
 /* Section spacing */
 .contact-section {
-    padding: 120px 0 160px 0;  /* top | right | bottom | left */
+    padding-top: 80px !important;  /* top | right | bottom | left */
 }
-@media (max-width: 768px) {
-    .contact-section {
-        padding: 80px 0 120px 0;
-    }
-}
-
 
 /* Form card */
 .contact-card {
@@ -63,19 +83,13 @@ body {
     margin-bottom: 30px;
 }
 
-.custom-navbar {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.hero-wrapper {
+/* .hero-wrapper {
     background: linear-gradient(
         rgba(0,0,0,0.55),
         rgba(0,0,0,0.55)
     ),
     url("../images/home.png") center/cover no-repeat;
-}
+} */
 
 .services-section {
     padding: 80px 0;
@@ -135,7 +149,9 @@ body {
 .price span {
     font-size: 16px;
 }
-
+.packages-heading{
+  padding-top: 80px;
+}
 .package-card ul {
     padding-left: 0;
     list-style: none;
@@ -206,6 +222,13 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 80px 0 120px 0;
+    }
+}
+
 
 
 .nav-tabs .nav-link {
@@ -325,6 +348,7 @@ body {
 
 .projects-section {
   background: #f8f9fa;
+  padding-top: 80px !important;
 }
 
 .project-card {
@@ -374,6 +398,7 @@ body {
 }
 .about-section {
   background: #fff;
+  padding-top: 80px !important;
 }
 
 .about-section h2 {
@@ -406,47 +431,4 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-}
-
-.contact-section {
-  background: #f8f9fa;
-}
-
-.contact-form {
-  background-color: rgba(0,0,0,0.6);
-  color: #fff;
-}
-
-.contact-form .form-control {
-  background-color: rgba(255,255,255,0.9);
-  border: none;
-  border-radius: 8px;
-}
-
-.contact-form .form-label {
-  font-weight: 500;
-}
-
-.contact-info h5 {
-  color: #ff6600;
-}
-
-.contact-info p {
-  font-size: 15px;
-}
-
-.map-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border-radius: 10px;
 }
