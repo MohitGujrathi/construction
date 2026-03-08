@@ -264,6 +264,14 @@ margin-bottom:10px;
 }
 
 }
+#mainTabs{
+overflow-x:auto;
+flex-wrap:nowrap;
+}
+
+#mainTabs .nav-link{
+white-space:nowrap;
+}
 
 @media (max-width: 768px) {
     .contact-section {
