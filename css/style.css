@@ -121,7 +121,7 @@ body {
 }
 .packages-section {
     padding: 80px 0;
-    background-color: #ffffff;
+    background-color: #f5f7fa;
 }
 
 .package-card {
@@ -203,24 +203,66 @@ body {
 }
 
 
-.packages-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+
+/* Mobile view */
+/* @media (max-width:768px){
+
+.vertical-tabs{
+flex-direction:row !important;
+margin-bottom:15px;
 }
 
-/* Tablet */
-@media (max-width: 992px) {
-    .packages-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.vertical-tabs .nav-link{
+flex:1;
+text-align:center;
 }
 
-/* Mobile */
-@media (max-width: 576px) {
-    .packages-grid {
-        grid-template-columns: 1fr;
-    }
+} */
+
+
+
+
+/* MOBILE VIEW */
+@media (max-width:768px){
+
+/* stack columns */
+.packages-section .row{
+flex-direction:column;
+}
+
+.packages-section .col-3,
+.packages-section .col-9{
+width:100%;
+max-width:100%;
+}
+
+/* make vertical tabs full width */
+.packages-section .nav.flex-column{
+width:100%;
+}
+
+/* tab button style */
+.packages-section .nav-pills .nav-link{
+width:100%;
+margin-bottom:5px;
+border:1px solid #ddd;
+border-radius:6px;
+text-align:left;
+}
+
+/* show content under tab */
+.packages-section .tab-content{
+margin-top:10px;
+}
+
+/* optional accordion feel */
+.packages-section .tab-pane{
+border:1px solid #eee;
+padding:10px;
+border-radius:6px;
+margin-bottom:10px;
+}
+
 }
 
 @media (max-width: 768px) {
@@ -281,19 +323,6 @@ body {
   line-height: 1.5;
 }
 
-.packages-section {
-  background-color: #fff;
-  padding: 40px 20px;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.packages-section {
-  background-color: #fff;
-  padding: 40px 20px;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
 .nav-tabs .nav-link {
   font-weight: 600;
   color: #333;

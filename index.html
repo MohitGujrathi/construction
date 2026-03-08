@@ -1,940 +1,1580 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MK Construction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8">
-  <title>MK Construction</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Bootstrap CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-</head>
-
-<body>
-  <!-- Navbar -->
+  <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="images/logo.png" height="40" class="me-2" alt="Logo">
+          <img src="images/logo.png" height="40" class="me-2" alt="Logo" />
           MK Construction
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Service">Service</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Packages">Packages</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Packages">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-  <div class="hero-wrapper">
-    
-    <section class="contact-bg">
+    <div class="hero-wrapper">
+      <section class="contact-bg">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Left Content -->
+            <div class="col-lg-6 text-white mb-4 mb-lg-0">
+              <h1 class="fw-bold display-5">
+                Build Your Dream Home with Confidence
+              </h1>
+              <p class="lead mt-3">
+                From foundation to finish, we deliver high-quality construction
+                with transparent pricing and timely delivery.
+              </p>
+
+              <ul class="list-unstyled mt-4">
+                <li class="mb-2">✔ 10+ Years of Construction Experience</li>
+                <li class="mb-2">✔ Premium Quality Materials</li>
+                <li class="mb-2">✔ On-Time Project Delivery</li>
+                <li class="mb-2">✔ Residential & Commercial Projects</li>
+              </ul>
+
+              <a
+                href="https://wa.me/9823195457?text=Hi"
+                class="btn btn-warning btn-lg mt-3"
+              >
+                Get Free Consultation
+              </a>
+            </div>
+
+            <!-- Right Form -->
+            <div class="col-lg-5 offset-lg-1">
+              <div class="contact-card">
+                <h3 class="fw-bold mb-3">Contact Us</h3>
+
+                <form
+                  onsubmit="
+                    sendWhatsAppMessage(this);
+                    return false;
+                  "
+                >
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control name"
+                      name="name"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control email"
+                      name="email"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <input
+                      type="tel"
+                      class="form-control number"
+                      name="phone"
+                      placeholder="Phone Number"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <textarea
+                      class="form-control message"
+                      name="message"
+                      rows="4"
+                      placeholder="Your Requirement"
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-warning w-100">
+                    Request a Call Back
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Services -->
+    <section class="services-section" id="Service">
       <div class="container">
-        <div class="row align-items-center">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Our Services</h2>
+          <p class="text-muted">
+            Complete construction solutions from planning to handover
+          </p>
+        </div>
 
-          <!-- Left Content -->
-          <div class="col-lg-6 text-white mb-4 mb-lg-0">
-            <h1 class="fw-bold display-5">Build Your Dream Home with Confidence</h1>
-            <p class="lead mt-3">
-              From foundation to finish, we deliver high-quality construction with
-              transparent pricing and timely delivery.
-            </p>
-
-            <ul class="list-unstyled mt-4">
-              <li class="mb-2">✔ 10+ Years of Construction Experience</li>
-              <li class="mb-2">✔ Premium Quality Materials</li>
-              <li class="mb-2">✔ On-Time Project Delivery</li>
-              <li class="mb-2">✔ Residential & Commercial Projects</li>
-            </ul>
-
-            <a href="https://wa.me/9823195457?text=Hi" class="btn btn-warning btn-lg mt-3">
-              Get Free Consultation
-            </a>
+        <div class="row g-4">
+          <!-- Service 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card text-center">
+              <div class="service-icon">🏠</div>
+              <h5>Residential Construction</h5>
+              <p>
+                End-to-end home construction services with quality materials and
+                modern designs.
+              </p>
+            </div>
           </div>
 
-          <!-- Right Form -->
-          <div class="col-lg-5 offset-lg-1">
-            <div class="contact-card">
-              <h3 class="fw-bold mb-3">Contact Us</h3>
+          <!-- Service 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card text-center">
+              <div class="service-icon">🏢</div>
+              <h5>Commercial Buildings</h5>
+              <p>
+                Office spaces, shops, and commercial buildings delivered on
+                time.
+              </p>
+            </div>
+          </div>
 
-              <form  onsubmit="sendWhatsAppMessage(this); return false;">
-                <div class="mb-3">
-                  <input type="text" class="form-control name" name="name" placeholder="Full Name" required>
+          <!-- Service 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card text-center">
+              <div class="service-icon">🧱</div>
+              <h5>Renovation & Remodeling</h5>
+              <p>
+                Upgrade, remodel, or expand your existing property with expert
+                planning.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card text-center">
+              <div class="service-icon">📐</div>
+              <h5>Design & Planning</h5>
+              <p>
+                Architectural design, planning approvals, and project estimation
+                services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages-section" id="Packages">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Our Packages</h2>
+          <p class="text-muted">
+            Complete construction solutions from planning to handover
+          </p>
+        </div>
+        <!-- Top Package Tabs -->
+        <ul class="nav nav-tabs" id="mainTabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#tab1"
+              >Structure ₹1099/sqft</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab2"
+              >Basic ₹1499/sqft</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab3"
+              >Standard ₹1699/sqft</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab4"
+              >Premium ₹1949/sqft</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab5"
+              >Royal ₹2099/sqft</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab6"
+              >Luxury ₹2499/sqft</a
+            >
+          </li>
+        </ul>
+
+        <div class="tab-content mt-3">
+          <!-- TAB 1 CONTENT -->
+          <div class="tab-pane fade show active" id="tab1">
+            <div class="row">
+              <!-- Vertical Tabs -->
+              <div class="col-md-3 col-12">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a class="nav-link active" data-bs-toggle="pill" href="#vtab1"
+                    >Earth Work</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#vtab2"
+                    >Structure</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#vtab3"
+                    >Miscellaneous</a
+                  >
                 </div>
+              </div>
 
-                <div class="mb-3">
-                  <input type="email" class="form-control email" name="email" placeholder="Email Address" required>
+              <!-- Vertical Tab Content -->
+              <div class="col-md-9 col-12">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="vtab1">
+                    <h6>Earth Work</h6>
+                    <ul>
+                      <li>
+                        Excavation in hard/ soft soil for foundation, and
+                        removing the excavated earth up to 5 feet in hard
+                        strata.
+                      </li>
+                      <li>
+                        In situations where space is limited and it’s not
+                        possible to store excavated soil on-site for
+                        construction purposes, there will be an extra fee for
+                        the provision of replacement soil. This additional
+                        charge will be Rs2000 per tractor load for distances of
+                        up to 6 kilometers from the construction site.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade" id="vtab2">
+                    <h6>Structure</h6>
+                    <ul>
+                      <li>
+                        <strong>Steel:</strong> Kalika, Trishul or equivalent
+                        brand. (TMT 500 or 550 grade Reinforcement Steel to be
+                        provided at 3.25 kgs/sqft of built-up area. All Steel
+                        designs are as per Structural engineer‘s drawing)
+                      </li>
+                      <li>
+                        <strong>Cement:</strong> Birla Super, UltraTech or
+                        equivalent Brand(53 Grade for Concrete works &amp; 43
+                        Grade for other works)
+                      </li>
+                      <li>RMC</li>
+                      <li>PCC Works of M15 Grade 1 : 2 :4</li>
+                      <li>
+                        RCC Works of M25 Grade for Column Footing, Plinth Beams,
+                        Columns and Roof Slabs. Thickness of roof slab shall be
+                        5” thick
+                      </li>
+                      <li>
+                        RCC Works of M25 Grade for Lintel, Canopy Projections,
+                        Staircase
+                      </li>
+                      <li>Column Sizes will be of 9”x18” min</li>
+                      <li>
+                        Soil testing (SBC of 220kN/m2 at 5’ depth from EGL)
+                      </li>
+                      <li>Water Proofing: Dr. Fixit</li>
+                      <li>Roof to Roof Height to be 11’0”</li>
+                      <li>9” Red Bricks for Exterior &amp; 6” for Interior</li>
+                      <li>
+                        Chicken Mesh will be used near beam, column, and masonry
+                        wall junction&nbsp;
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade" id="vtab3">
+                    <h6>Miscellaneous</h6>
+                    <ul>
+                      <li>Underground Water tank up to 10000 liter</li>
+                    </ul>
+                  </div>
                 </div>
-
-                <div class="mb-3">
-                  <input type="tel" class="form-control number" name="phone" placeholder="Phone Number" required>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade show" id="tab2">
+            <div class="row">
+              <!-- Vertical Tabs -->
+              <div class="col-md-3 col-12">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a
+                    class="nav-link active"
+                    data-bs-toggle="pill"
+                    href="#v2tab1"
+                    >Designs and Layouts</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab2"
+                    >Earth Work</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab3"
+                    >Structure</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab4"
+                    >Flooring</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab5"
+                    >Kitchen Counter
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab6"
+                    >Bathroom
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab7"
+                    >Door Frames with Fitting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab8"
+                    >Window
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab9"
+                    >Plumbing & Sanitation Lines
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab10"
+                    >Painting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab11"
+                    >Electrical
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v2tab12"
+                    >Miscellaneous
+                  </a>
                 </div>
+              </div>
 
-                <div class="mb-3">
-                  <textarea class="form-control message" name="message" rows="4" placeholder="Your Requirement"></textarea>
+              <!-- Vertical Tab Content -->
+              <div class="col-md-9 col-12">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="v2tab1">
+                    <h6>Designs and Layouts</h6>
+                    <ul>
+                      <li>Architectural floor plan</li>
+                      <li>3D Elevation</li>
+                      <li>Electrical layout</li>
+                      <li>Plumbing layout</li>
+                      <li>Brickwork layout</li>
+                      <li>Working Drawings</li>
+                      <li>Structural Drawings</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab2">
+                    <h6>Earth Work</h6>
+                    <ul>
+                      <li>
+                        Excavation in hard/ soft soil for foundation, and
+                        removing the excavated earth up to 4 feet in hard
+                        strata.
+                      </li>
+                      <li>
+                        In situations where space is limited and it’s not
+                        possible to store excavated soil on-site for
+                        construction purposes, there will be an extra fee for
+                        the provision of replacement soil. This additional
+                        charge will be Rs2000 per tractor load for distances of
+                        up to 6 kilometers from the construction site.
+                      </li>
+                      <li>Plinth height will be 1. 5 feet</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab3">
+                    <h6>Structure</h6>
+                    <ul>
+                      <li>
+                        <strong>Steel:</strong> Kalika / Rajuri or equivalent
+                        brand. (TMT 500 or 550 grade Reinforcement Steel to be
+                        provided at 3 kgs/sqft of built-up area. All Steel
+                        designs are as per Structural engineer‘s drawing)
+                      </li>
+                      <li>
+                        <strong>Cement:</strong> JK Super, Chettinad or
+                        equivalent Brand(53 Grade for Concrete works & 43 Grade
+                        for other works)
+                      </li>
+                      <li>RMC</li>
+                      <li>PCC Works of M15 Grade 1 : 2 :4</li>
+                      <li>
+                        RCC Works of M25 Grade for Column Footing, Plinth Beams,
+                        Columns and Roof Slabs. Thickness of roof slab shall be
+                        5” thick
+                      </li>
+                      <li>
+                        RCC Works of M25 Grade for Lintel, Canopy Projections,
+                        Staircase
+                      </li>
+                      <li>Column Sizes will be of 9”x18” min</li>
+                      <li>
+                        Soil testing (SBC of 220kN/m2 at 5’ depth from EGL)
+                      </li>
+                      <li>Water Proofing: Dr. Fixit</li>
+                      <li>Roof to Roof Height to be 10’0”</li>
+                      <li>6” Red Bricks for Exterior & 4” for Interior</li>
+                      <li>
+                        Chicken Mesh will be used near beam, column, and masonry
+                        wall junction
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab4">
+                    <h6>Flooring</h6>
+                    <ul>
+                      <li>
+                        Vitrified flooring of ₹50/sqft (@MRP)will be provided
+                        for Living Room, Kitchen & bedrooms
+                      </li>
+                      <li>
+                        Providing the all inside windows and doors with Granite
+                        frame up to of ₹75/sqft(@MRP)
+                      </li>
+                      <li>
+                        Granite flooring will be provided for Staircase (trades
+                        and riser) of ₹75/sqft(@MRP)
+                      </li>
+                      <li>
+                        Ceramic Tiles for Balcony & Utility Flooring of
+                        ₹40/sqft(@MRP)
+                      </li>
+                      <li>
+                        Ceramic Tiles for Parking Flooring of ₹40/sqft(@MRP)
+                      </li>
+                      <li>
+                        20mm Granite will be half round nosing for staircase and
+                        skirting
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab5">
+                    <h6>Kitchen Counter</h6>
+                    <ul>
+                      <li>
+                        Providing 4’0” feet height Glazed tiles (₹45/sqft) over
+                        20mm thick, kitchen otta granite top upto of
+                        ₹125/sqft(@MRP) and rest on polish kadappa fixing with
+                        SS sink of size 18”x21” up to ₹3000(@MRP)
+                      </li>
+                      <li>BIB Cock : ₹700</li>
+                      <li>Main Sink Faucet : ₹1500</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab6">
+                    <h6>Bathroom</h6>
+                    <ul>
+                      <li>
+                        Anti-skid Ceramic flooring for Toilets at ₹40/sft(@MRP)
+                      </li>
+                      <li>
+                        Dadoing Works – 7’ Height – Cost of Tile at
+                        ₹40/sft(@MRP)
+                      </li>
+                      <li>
+                        Bathroom Fittings –&nbsp;<strong>₹30,000 @MRP</strong>
+                        for (per 1000 sqft) each Bathroom includes Floor Mounted
+                        Closet, Washbasin &amp; CP fittings of Hindware, Parry
+                        Ware or equivalent make.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab7">
+                    <h6>Door Frames with Fitting</h6>
+                    <ul>
+                      <li>
+                        Main Door –Providing Teakwood frame for main door with
+                        laminated door @ ₹20000/- (@MRP) Veneer
+                      </li>
+                      <li>
+                        Bedroom Doors – Providing All internal Bedrooms Doors of
+                        laminated door @ ₹7000/- (@MRP)
+                      </li>
+                      <li>
+                        Bathroom Doors – For bathroom FRP doors @ ₹5000/- (@MRP)
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab8">
+                    <h6>Window</h6>
+                    <ul>
+                      <li>
+                        Aluminum window: ₹220/sqft(@ MRP) with powder coated 3
+                        track type, Design 4 mm glass&nbsp;
+                      </li>
+                      <li>
+                        Window grill ₹140/ sqft(@ MRP) for Vertical and
+                        Horizantal Bar Design
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab9">
+                    <h6>Plumbing & Sanitation Lines</h6>
+                    <ul>
+                      <li>
+                        Providing all plumbing work are concealed<br />by
+                        PVC/UPVC material ( Prince, Ashirwadh Company).
+                      </li>
+                      <li>
+                        Sanitary fittings and CP fitting of up to
+                        ₹30000/bathroom (per 1000 sqft)&nbsp; are provided with
+                        premium-quality
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab10">
+                    <h6>Painting</h6>
+                    <ul>
+                      <li>
+                        Internal Walls and Ceilings- Two coats of Tractor
+                        Emulsion, ASIAN PAINT: over 2 coat of primer &amp; 2
+                        coats of J.K putty (OBD Range ₹110-120/- Per Lit)
+                      </li>
+                      <li>
+                        External – Two coats of ACE of ASIAN Paints over 1 coat
+                        of external primer (Primer Range ₹45-50/- Per Lit, ACE
+                        PAINT Range ₹110-120/- Per Lit)
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab11">
+                    <h6>Electrical</h6>
+                    <ul>
+                      <li>
+                        3 Light points per 100 sqft, 2 fan point &amp; 4nos of 5
+                        Amp plug point
+                      </li>
+                      <li>
+                        1 Heating point of for Each toilet &amp; kitchen of 15
+                        Amp Plug Point
+                      </li>
+                      <li>Distribution Box of Domestic make.</li>
+                      <li>AC Points for rooms</li>
+                      <li>CCTV Provision in Parking</li>
+                      <li>
+                        Polycab / Finolex wirings and Anchor / Ziva&nbsp;
+                        switches and&nbsp; sockets&nbsp;&nbsp;
+                      </li>
+                      <li>MCB Brand Polycab</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v2tab12">
+                    <h6>Miscellaneous</h6>
+                    <ul>
+                      <li>Underground Water tank up to 5000 liters&nbsp;</li>
+                      <li>
+                        Overhead water tank up to 2000 liter of Sintex / Plasto
+                        make&nbsp;
+                      </li>
+                      <li>SS Railings for Internal &amp; External Staircase</li>
+                      <li>(Range up to ₹200/- per RFT)</li>
+                      <li>Parapet Wall Height : 3.5 ft</li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <button type="submit" class="btn btn-warning w-100">
-                  Request a Call Back
+          <div class="tab-pane fade show" id="tab3">
+            <div class="row">
+              <!-- Vertical Tabs -->
+              <div class="col-md-3 col-12">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a
+                    class="nav-link active"
+                    data-bs-toggle="pill"
+                    href="#v3tab1"
+                    >Designs and Layouts</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab2"
+                    >Earth Work</a
+                  >
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab3"
+                    >Structure</a
+                  >
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab4"
+                    >Flooring</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab5"
+                    >Kitchen Counter
+                  </a>
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab6"
+                    >Bathroom
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab7"
+                    >Door Frames with Fitting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab8"
+                    >Window
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab9"
+                    >Plumbing & Sanitation Lines
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab10"
+                    >Painting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab11"
+                    >Electrical
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v3tab12"
+                    >Miscellaneous
+                  </a>
+                </div>
+              </div>
+
+              <!-- Vertical Tab Content -->
+              <div class="col-md-9 col-12">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="v3tab1">
+                    <h6>Designs and Layouts</h6>
+                    <ul>
+                      <li>Architectural floor plan</li>
+                      <li>3D Elevation</li>
+                      <li>Electrical layout</li>
+                      <li>Plumbing layout</li>
+                      <li>Brickwork layout</li>
+                      <li>Working Drawings</li>
+                      <li>Structural Drawings</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab2">
+                    <h6>Earth Work</h6>
+                    <ul>
+                      <li>
+                        Excavation in hard/ soft soil for foundation, and
+                        removing the excavated earth up to 4 feet in hard
+                        strata.
+                      </li>
+                      <li>
+                        In situations where space is limited and it’s not
+                        possible to store excavated soil on-site for
+                        construction purposes, there will be an extra fee for
+                        the provision of replacement soil. This additional
+                        charge will be Rs2000 per tractor load for distances of
+                        up to 6 kilometers from the construction site.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade" id="v3tab3">
+                    <h6>Structure</h6>
+                    <ul>
+                      <li>
+                        <strong>Steel:</strong> Kalika, Trishul or equivalent
+                        brand. (TMT 500 or 550 grade Reinforcement Steel to be
+                        provided at 3.25 kgs/sqft of built-up area. All Steel
+                        designs are as per Structural engineer‘s drawing)
+                      </li>
+                      <li>
+                        <strong>Cement:</strong> Birla Super, UltraTech or
+                        equivalent Brand(53 Grade for Concrete works &amp; 43
+                        Grade for other works)
+                      </li>
+                      <li>RMC</li>
+                      <li>PCC Works of M15 Grade 1 : 2 :4</li>
+                      <li>
+                        RCC Works of M25 Grade for Column Footing, Plinth Beams,
+                        Columns and Roof Slabs. Thickness of roof slab shall be
+                        5” thick
+                      </li>
+                      <li>
+                        RCC Works of M25 Grade for Lintel, Canopy Projections,
+                        Staircase
+                      </li>
+                      <li>Column Sizes will be of 9”x18” min</li>
+                      <li>
+                        Soil testing (SBC of 220kN/m2 at 5’ depth from EGL)
+                      </li>
+                      <li>Water Proofing: Dr. Fixit</li>
+                      <li>Roof to Roof Height to be 11’0”</li>
+                      <li>9” Red Bricks for Exterior &amp; 6” for Interior</li>
+                      <li>
+                        Chicken Mesh will be used near beam, column, and masonry
+                        wall junction&nbsp;
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab4">
+                    <h6>Flooring</h6>
+                    <ul>
+                      <li>
+                        Vitrified flooring of ₹100/sqft (@MRP)will be provided
+                        for Living Room, Kitchen & bedrooms
+                      </li>
+                      <li>
+                        Providing all inside windows and doors with Granite
+                        frame up to of ₹85/sqft(@MRP)
+                      </li>
+                      <li>
+                        Granite flooring will be provided for Staircase (trades
+                        and riser) of ₹85/sqft(@MRP)
+                      </li>
+                      <li>
+                        Ceramic Tiles for Balcony & Utility Flooring of
+                        ₹60/sqft(@MRP)
+                      </li>
+                      <li>
+                        Ceramic Tiles for Parking Flooring of ₹60/sqft(@MRP)
+                      </li>
+                      <li>
+                        20mm Granite will be half round nosing for staircase and
+                        skirting
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab5">
+                    <h6>Kitchen Counter</h6>
+                    <ul>
+                      <li>
+                        Providing 4’0” feet height Glazed tiles (₹60/sqft) over
+                        20mm thick, kitchen otta granite top upto of
+                        ₹160/sqft(@MRP) and rest on polish kadappa fixing with
+                        SS sink of size 18”x24” up to ₹6000(@MRP)
+                      </li>
+                      <li>BIB Cock : ₹1000</li>
+                      <li>Main Sink Faucet : ₹2000</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab6">
+                    <h6>Bathroom</h6>
+                    <ul>
+                      <li>
+                        Anti-skid Ceramic flooring for Toilets at ₹60/sqft(@MRP)
+                      </li>
+                      <li>
+                        Dadoing Works – 7’ Height – Cost of Tile at
+                        ₹60/sqft(@MRP)
+                      </li>
+                      <li>
+                        Bathroom Fittings –&nbsp;<strong>₹50,000 @MRP</strong>
+                        (per 1000 sqft) for each Bathroom includes Floor Mounted
+                        Closet, Washbasin &amp; CP fittings of Hindware, Parry
+                        Ware or equivalent make.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab7">
+                    <h6>Door Frames with Fitting</h6>
+                    <ul>
+                      <li>
+                        Main Door –Providing Teakwood frame for main door with
+                        laminated door @ ₹30000/- (@MRP) African teak
+                      </li>
+                      <li>
+                        Bedroom Doors – Providing All internal Bedrooms Doors of
+                        laminated door @ ₹9000/- (@MRP)
+                      </li>
+                      <li>
+                        Bathroom Doors – For bathroom FRP doors @ ₹7000/- (@MRP)
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab8">
+                    <h6>Window</h6>
+                    <ul>
+                      <li>
+                        Main Door –Providing Teakwood frame for main door with
+                        laminated door @ ₹30000/- (@MRP) African teak
+                      </li>
+                      <li>
+                        Bedroom Doors – Providing All internal Bedrooms Doors of
+                        laminated door @ ₹9000/- (@MRP)
+                      </li>
+                      <li>
+                        Bathroom Doors – For bathroom FRP doors @ ₹7000/- (@MRP)
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab9">
+                    <h6>Plumbing & Sanitation Lines</h6>
+                    <ul>
+                      <li>
+                        Providing all plumbing work are concealed<br />by
+                        PVC/UPVC material ( Prince, Ashirwadh Company).
+                      </li>
+                      <li>
+                        Sanitary fittings and CP fitting of up to
+                        ₹50000/bathroom (per 1000 sqft) are provided with
+                        premium-quality
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab10">
+                    <h6>Painting</h6>
+                    <ul>
+                      <li>
+                        Internal Walls and Ceilings- Two coats of Tractor
+                        Emulsion, ASIAN PAINT: over 1 coat of primer &amp; 2
+                        coats of J.K putty (OBD Range ₹225-250/- Per Lit)
+                      </li>
+                      <li>
+                        External – Two coats of APEX&nbsp; Paints over 1 coat of
+                        external primer (Primer Range ₹55-60/- Per Lit, APEX
+                        PAINT Range ₹225-250/- Per Lit)
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab11">
+                    <h6>Electrical</h6>
+                    <ul>
+                      <li>
+                        3 Light points per 100 sqft, 1 fan point &amp; 4nos of 5
+                        Amp plug point
+                      </li>
+                      <li>
+                        1 Heating point of for Each toilet &amp; kitchen of 15
+                        Amp Plug Point
+                      </li>
+                      <li>Distribution Box of Domestic make.</li>
+                      <li>AC Points for rooms</li>
+                      <li>CCTV Provision in Parking</li>
+                      <li>
+                        Polycab /Finolex wirings and Anchor ziva switches
+                        and&nbsp; sockets
+                      </li>
+                      <li>MCB Brand : Polycab&nbsp;&nbsp;</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v3tab12">
+                    <h6>Miscellaneous</h6>
+                    <ul>
+                      <li>Underground Water tank up to 6000 liter&nbsp;</li>
+                      <li>
+                        Overhead water tank up to 2000 liter of Sintex / Plasto
+                        make&nbsp;
+                      </li>
+                      <li>
+                        SS Railings for Internal &amp; External Staircase (Range
+                        ₹300/RFT)
+                      </li>
+                      <li>Parapet wall height : 3.5 feet</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade show" id="tab4">
+            <div class="row">
+              <!-- Vertical Tabs -->
+              <div class="col-md-3 col-12">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a
+                    class="nav-link active"
+                    data-bs-toggle="pill"
+                    href="#v4tab1"
+                    >Designs and Layouts</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab2"
+                    >Earth Work</a
+                  >
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab3"
+                    >Structure</a
+                  >
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab4"
+                    >Flooring</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab5"
+                    >Kitchen Counter
+                  </a>
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab6"
+                    >Bathroom
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab7"
+                    >Door Frames with Fitting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab8"
+                    >Window
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab9"
+                    >Plumbing & Sanitation Lines
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab10"
+                    >Painting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab11"
+                    >Electrical
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v4tab12"
+                    >Miscellaneous
+                  </a>
+                </div>
+              </div>
+
+              <!-- Vertical Tab Content -->
+              <div class="col-md-9 col-12">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="v4tab1">
+                    <h6>Designs and Layouts</h6>
+                    <ul>
+                      <li>Architectural floor plan</li>
+                      <li>3D Elevation</li>
+                      <li>Electrical layout</li>
+                      <li>Plumbing layout</li>
+                      <li>Brickwork layout</li>
+                      <li>Working Drawings</li>
+                      <li>Structural Drawings</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab2">
+                    <h6>Earth Work</h6>
+                    <ul><li>Excavation in hard/ soft soil for foundation, and removing the excavated earth up to 6 feet in hard strata.</li><li>In situations where space is limited and it’s not possible to store excavated soil on-site for construction purposes, there will be an extra fee for the provision of replacement soil. This additional charge will be Rs2000 per tractor load for distances of up to 6 kilometers from the construction site.</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade" id="v4tab3">
+                    <h6>Structure</h6>
+                    <ul><li><strong>Steel:</strong> JSW or equivalent brand. (TMT 550D grade Reinforcement Steel to be provided at 3 kgs/sqft of built-up area. All Steel designs are as per Structural engineer‘s drawing)</li><li><strong>Cement:</strong> Birla Super, UltraTech or equivalent Brand(53 Grade for Concrete works &amp; 43 Grade for other works)</li><li>RMC</li><li>PCC Works of M15 Grade 1 : 2 :4</li><li>RCC Works of M25 Grade for Column Footing, Plinth Beams, Columns and Roof Slabs. Thickness of roof slab shall be 5” thick</li><li>RCC Works of M25 Grade for Lintel, Canopy Projections, Staircase</li><li>Column Sizes will be of 9”x18” min</li><li>Soil testing (SBC of 220kN/m2 at 5’ depth from EGL)</li><li>Water Proofing: Dr. Fixit</li><li>Roof to Roof Height to be 11’0”</li><li>9” Red Bricks for Exterior &amp; 6” for Interior</li><li>Chicken Mesh will be used near beam, column, and masonry wall junction&nbsp;</li><li>Plinth height will be : 2 feet</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab4">
+                    <h6>Flooring</h6>
+                    <ul><li>Digital double coat flooring of ₹ 140/sqft (@MRP)will be provided for Living Room, Kitchen&nbsp; &amp;&nbsp; bedrooms</li><li>Providing the all inside windows and doors with Granite frame up to of ₹110/sqft(@MRP)</li><li>Granite flooring will be provided for Staircase (trades and riser)&nbsp; of ₹110/sqft(@MRP)</li><li>Ceramic Tiles for Balcony &amp; Utility Flooring of ₹80/sqft(@MRP)</li><li>Ceramic Tiles for Parking Flooring of ₹80/sqft(@MRP)</li><li>20mm Granite will be half round nosing for staircase and skirting</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab5">
+                    <h6>Kitchen Counter</h6>
+                    <ul><li>Providing 4’0” feet height Glazed tiles (₹80/sqft) over 20mm thick, kitchen otta granite top upto of ₹180/sqft(@MRP) and rest on polish kadappa fixing with SS sink of size 18”x27” up to ₹9000(@MRP)</li><li>BIB Cock : ₹1200</li><li>Main Sink Faucet : ₹2500</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab6">
+                    <h6>Bathroom</h6>
+                    <ul><li>Anti-skid Ceramic flooring for Toilets at ₹80/sft(@MRP)</li><li>Dadoing Works – 7’ Height – Cost of Tile at ₹80/sft(@MRP)</li><li>Bathroom Fittings –&nbsp;<strong>₹75,000 @MRP</strong> (per 1000 sqft) for each Bathroom includes Floor Mounted Closet, Washbasin &amp; CP fittings of Hindware, Parry Ware or equivalent make.</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab7">
+                    <h6>Door Frames with Fitting</h6>
+                    <ul><li>Main Door –Providing Teakwood frame and main door @ ₹40000/- (@MRP) Aferican teak</li><li>Bedroom Doors – Providing All internal Bedrooms Doors of laminated door @ ₹11000/- (@MRP)</li><li>Pooja Door –&nbsp; Size 5”x 3” @ ₹10000/- (@MRP)</li><li>Bathroom Doors – For bathroom FRP doors @ ₹9000/- (@MRP)</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab8">
+                    <h6>Window</h6>
+                    <ul><li>UPVC window: ₹650/sqft(@ MRP) with powder coated 3 track type</li><li>Window grill ₹200/ sqft(@ MRP)&nbsp;</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab9">
+                    <h6>Plumbing & Sanitation Lines</h6>
+                    <ul><li>Providing all plumbing work are concealed<br>by PVC/UPVC material ( Finolex, Astral Company).<br>Sanitary fittings and CP fitting of up to ₹75000/bathroom&nbsp; are provided with premium-quality</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab10">
+                    <h6>Painting</h6>
+                    <ul><li>Internal Walls and Ceilings- Two coats of Royal Emulsion, ASIAN PAINT: over 2 coat of primer &amp; 2 coats of J.K putty (Range ₹325-350/- Per Lit)</li><li>External – Two coats of APEX Ultima Paints over 2 coat of external primer (Primer Range ₹90-100/- Per Lit, APEX Ultima PAINT Range ₹325-350- Per Lit)</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab11">
+                    <h6>Electrical</h6>
+                    <ul><li>3 Light points per 100 sqft, 1 fan point &amp; 4nos of 5 Amp plug point</li><li>1 Heating point of for Each toilet &amp; kitchen of 15 Amp Plug Point</li><li>Distribution Box of Domestic make.</li><li>AC Points for rooms</li><li>CCTV Provision in Parking</li><li>Polycab fireproof wirings and Legrand switches and&nbsp; sockets&nbsp;&nbsp;</li><li>MCB : Legrand</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v4tab12">
+                    <h6>Miscellaneous</h6>
+                    <ul><li>Underground Water tank up to 8000 liter&nbsp;</li><li>Overhead water tank up to 2000 liter of Sintex / Plasto make&nbsp;</li><li>SS Railings for Internal &amp; External Staircase</li><li>(Range ₹400/RFT)</li><li>Parapet wall height : 3.5 feet</li></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade show" id="tab5">
+            <div class="row">
+              <!-- Vertical Tabs -->
+              <div class="col-md-3 col-12">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a
+                    class="nav-link active"
+                    data-bs-toggle="pill"
+                    href="#v5tab1"
+                    >Designs and Layouts</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab2"
+                    >Earth Work</a
+                  >
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab3"
+                    >Structure</a
+                  >
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab4"
+                    >Flooring</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab5"
+                    >Kitchen Counter
+                  </a>
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab6"
+                    >Bathroom
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab7"
+                    >Door Frames with Fitting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab8"
+                    >Window
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab9"
+                    >Plumbing & Sanitation Lines
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab10"
+                    >Painting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab11"
+                    >Electrical
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab12"
+                    >Miscellaneous
+                  </a>
+                </div>
+              </div>
+
+              <!-- Vertical Tab Content -->
+              <div class="col-md-9 col-12">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="v5tab1">
+                    <h6>Designs and Layouts</h6>
+                    <ul>
+                      <li>Architectural floor plan</li>
+                      <li>3D Elevation</li>
+                      <li>Electrical layout</li>
+                      <li>Plumbing layout</li>
+                      <li>Brickwork layout</li>
+                      <li>Working Drawings</li>
+                      <li>Structural Drawings</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab2">
+                    <h6>Earth Work</h6>
+                    <ul><li>Excavation in hard/ soft soil for foundation, and removing the excavated earth up to 7 feet in hard strata.</li><li>In situations where space is limited and it’s not possible to store excavated soil on-site for construction purposes, there will be an extra fee for the provision of replacement soil. This additional charge will be Rs2000 per tractor load for distances of up to 6 kilometers from the construction site.</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade" id="v5tab3">
+                    <h6>Structure</h6>
+                    <ul><li><strong>Steel:</strong> Tata or equivalent brand. (TMT 550D grade Reinforcement Steel to be provided at 3 kgs/sqft of built-up area. All Steel designs are as per Structural engineer‘s drawing)</li><li><strong>Cement:</strong> Birla Super, UltraTech or equivalent Brand(53 Grade for Concrete works &amp; 43 Grade for other works)</li><li>RMC</li><li>PCC Works of M15 Grade 1 : 2 :4</li><li>RCC Works of M25 Grade for Column Footing, Plinth Beams, Columns and Roof Slabs. Thickness of roof slab shall be 5” thick</li><li>RCC Works of M25 Grade for Lintel, Canopy Projections, Staircase</li><li>Column Sizes will be of 9”x18” min</li><li>Soil testing (SBC of 220kN/m2 at 5’ depth from EGL)</li><li>Water Proofing: Dr. Fixit</li><li>Roof to Roof Height to be 11’5”</li><li>9” Red Bricks for Exterior &amp; 6” for Interior</li><li>Chicken Mesh will be used near beam, column, and masonry wall junction</li><li>Plinth Height will be : 2 feet</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab4">
+                    <h6>Flooring</h6>
+                    <ul><li>Digital double coat flooring of ₹ 160/sqft (@MRP)will be provided for Living Room, Kitchen&nbsp; &amp;&nbsp; bedrooms</li><li>Providing the all inside windows and doors with Granite frame up to of ₹140/sqft(@MRP)</li><li>Granite flooring will be provided for Staircase (trades and riser)&nbsp; of ₹115/sqft(@MRP)</li><li>Ceramic Tiles for Balcony &amp; Utility Flooring of ₹90/sqft(@MRP)</li><li>Ceramic Tiles for Parking Flooring of ₹90/sqft(@MRP)</li><li>20mm Granite will be half round nosing for staircase and skirting</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab5">
+                    <h6>Kitchen Counter</h6>
+                    <ul><li>Providing 4’0” feet height Glazed tiles (₹100/sqft) over 20mm thick, kitchen otta granite top upto of ₹200/sqft(@MRP) and rest on polish kadappa fixing with SS sink of size 18”x27” up to ₹ 12000(@MRP)</li><li>Bib cock : ₹1500</li><li>Main Sink Faucet : ₹3000</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab6">
+                    <h6>Bathroom</h6>
+                    <ul><li>Anti-skid Ceramic flooring for Toilets at ₹100/sft(@MRP)</li><li>Dadoing Works – 7’ Height – Cost of Tile at ₹100/sft(@MRP)</li><li>Bathroom Fittings –&nbsp;<strong>₹100000 @MRP</strong>&nbsp;for each Bathroom includes Floor Mounted Closet, Washbasin &amp; CP fittings of Hindware, Parry Ware or equivalent make.</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab7">
+                    <h6>Door Frames with Fitting</h6>
+                    <ul><li>Main Door –Providing Teakwood frame and main door @ ₹50000/- (@MRP) Aferican teak</li><li>Bedroom Doors – Providing All internal Bedrooms Doors of laminated door @ ₹13000/- (@MRP)</li><li>Pooja Door –&nbsp; Size 5”x 3” @ ₹20000/- (@MRP)</li><li>Bathroom Doors – For bathroom FRP doors @ ₹11000/- (@MRP)</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab8">
+                    <h6>Window</h6>
+                    <ul><li>UPVC window: ₹850/sqft(@ MRP) with powder coated 3 track type</li><li>Window grill ₹220/ sqft(@ MRP)&nbsp;</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab9">
+                    <h6>Plumbing & Sanitation Lines</h6>
+                    <ul><li>UPVC window: ₹850/sqft(@ MRP) with powder coated 3 track type</li><li>Window grill ₹220/ sqft(@ MRP)&nbsp;</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab10">
+                    <h6>Painting</h6>
+                    <ul><li>Internal Walls and Ceilings- Two coats of Royal Emulsion, ASIAN PAINT: over 2 coat of primer &amp; 2 coats of J.K putty (Range ₹500-550/- Per Lit)</li><li>External – Two coats of APEX Ultima Paints over 2 coat of external primer (Primer Range ₹90-100/- Per Lit, APEX Ultima PAINT Range ₹500-550/- Per Lit)</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab11">
+                    <h6>Electrical</h6>
+                    <ul><li>3 Light points per 100 sqft, 1 fan point &amp; 4nos of 5 Amp plug point</li><li>1 Heating point of for Each toilet &amp; kitchen of 15 Amp Plug Point</li><li>Distribution Box of Domestic make.</li><li>AC Points for rooms</li><li>CCTV Provision in Parking</li><li>Finolex silver fireproof wirings and L&amp;T engalze switches and&nbsp; sockets</li><li>MCB brand :&nbsp; L&amp;T engalze&nbsp;</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v5tab12">
+                    <h6>Miscellaneous</h6>
+                    <ul><li>Underground Water tank up to 10000 liter&nbsp;</li><li>Overhead water tank up to 4000 liter of Sintex / Plasto make&nbsp;</li><li>SS Railings for Internal &amp; External Staircase</li><li>(Range ₹1500/RFT)</li><li>Parapet wall height : 3.5 feet</li></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-pane fade show" id="tab6">
+            <div class="row">
+              <!-- Vertical Tabs -->
+              <div class="col-md-3 col-12">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a
+                    class="nav-link active"
+                    data-bs-toggle="pill"
+                    href="#v6tab1"
+                    >Designs and Layouts</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab2"
+                    >Earth Work</a
+                  >
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab3"
+                    >Structure</a
+                  >
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab4"
+                    >Flooring</a
+                  >
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab5"
+                    >Kitchen Counter
+                  </a>
+
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab6"
+                    >Bathroom
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab7"
+                    >Door Frames with Fitting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab8"
+                    >Window
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v5tab9"
+                    >Plumbing & Sanitation Lines
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab10"
+                    >Painting
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab11"
+                    >Electrical
+                  </a>
+                  <a class="nav-link" data-bs-toggle="pill" href="#v6tab12"
+                    >Miscellaneous
+                  </a>
+                </div>
+              </div>
+
+              <!-- Vertical Tab Content -->
+              <div class="col-md-9 col-12">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="v6tab1">
+                    <h6>Designs and Layouts</h6>
+                    <ul>
+                      <li>Architectural floor plan</li>
+                      <li>3D Elevation</li>
+                      <li>Electrical layout</li>
+                      <li>Plumbing layout</li>
+                      <li>Brickwork layout</li>
+                      <li>Working Drawings</li>
+                      <li>Structural Drawings</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab2">
+                    <h6>Earth Work</h6>
+                    <ul><li>Excavation in hard/ soft soil for foundation, and removing the excavated earth up to 10 feet in hard strata.</li><li>In situations where space is limited and it’s not possible to store excavated soil on-site for construction purposes, there will be an extra fee for the provision of replacement soil. This additional charge will be Rs2000 per tractor load for distances of up to 6 kilometers from the construction site.</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade" id="v6tab3">
+                    <h6>Structure</h6>
+                    <ul><li><strong>Steel:</strong> Tata or equivalent brand. (TMT 550D grade Reinforcement Steel to be provided at 3 kgs/sqft of built-up area. All Steel designs are as per Structural engineer‘s drawing)</li><li><strong>Cement:</strong> Birla Super, UltraTech or equivalent Brand(53 Grade for Concrete works &amp; 43 Grade for other works)</li><li>RMC</li><li>PCC Works of M15 Grade 1 : 2 :4</li><li>RCC Works of M25 Grade for Column Footing, Plinth Beams, Columns and Roof Slabs. Thickness of roof slab shall be 5” thick</li><li>RCC Works of M25 Grade for Lintel, Canopy Projections, Staircase</li><li>Column Sizes will be of 9”x18” min</li><li>Soil testing (SBC of 220kN/m2 at 5’ depth from EGL)</li><li>Water Proofing: Dr. Fixit</li><li>Roof to Roof Height to be 12’ ft</li><li>9” Red Bricks for Exterior &amp; 6” for Interior</li><li>Chicken Mesh will be used near beam, column, and masonry wall junction</li><li>Plinth Height will be : 2 feet</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab4">
+                    <h6>Flooring</h6>
+                    <ul><li>Digital double coat flooring of ₹ 250/sqft (@MRP)will be provided for Living Room and ₹ 2o0/sqft for Kitchen&nbsp; &amp;&nbsp; bedrooms</li><li>Providing the all inside windows and doors with Granite frame up to of ₹200/sqft(@MRP)</li><li>Granite flooring will be provided for Staircase (trades and riser)&nbsp; of ₹150/sqft(@MRP)</li><li>Ceramic Tiles for Balcony &amp; Utility Flooring of ₹130/sqft(@MRP)</li><li>Ceramic Tiles for Parking Flooring of ₹130/sqft(@MRP)</li><li>20mm Granite will be half round nosing for staircase and skirting</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab5">
+                    <h6>Kitchen Counter</h6>
+                    <ul><li>Providing 4’0” feet height Glazed tiles (₹200/sqft) over 20mm thick, kitchen otta granite top upto of ₹250/sqft(@MRP) and rest on polish kadappa fixing with SS sink of size 18”x27” up to ₹ 20000(@MRP)</li><li>Bib cock : ₹2000</li><li>Main Sink Faucet : ₹4000</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab6">
+                    <h6>Bathroom</h6>
+                    <ul><li>Anti-skid Ceramic flooring for Toilets at ₹150/sft(@MRP)</li><li>Dadoing Works – 7’ Height – Cost of Tile at ₹150/sft(@MRP)</li><li>Bathroom Fittings –&nbsp;<strong>₹150000 @MRP</strong>&nbsp;for each Bathroom includes Floor Mounted Closet, Washbasin &amp; CP fittings of Hindware, Parry Ware or equivalent make.</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab7">
+                    <h6>Door Frames with Fitting</h6>
+                    <ul><li>Main Door –Providing Teakwood frame and main door @ ₹75000/- (@MRP) Aferican teak</li><li>Bedroom Doors – Providing All internal Bedrooms Doors of laminated door @ ₹20000/- (@MRP)</li><li>Pooja Door –&nbsp; Size 5”x 3” @ ₹30000/- (@MRP)</li><li>Bathroom Doors – For bathroom FRP doors @ ₹17000/- (@MRP)</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab8">
+                    <h6>Window</h6>
+                    <ul><li>UPVC window: ₹1250/sqft(@ MRP) with powder coated 3 track type</li><li>Window grill ₹250/ sqft(@ MRP)&nbsp;</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab9">
+                    <h6>Plumbing & Sanitation Lines</h6>
+                    <ul><li>Providing all plumbing work are concealed<br>by PVC/UPVC material ( Finolex, Astral Company).<br>Sanitary fittings and CP fitting of up to ₹150000/bathroom&nbsp; are provided with premium-quality</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab10">
+                    <h6>Painting</h6>
+                    <ul><li>Internal Walls and Ceilings- Two coats of Royal Emulsion, ASIAN PAINT: over 2 coat of primer &amp; 2 coats of J.K putty (Range ₹700-750/- Per Lit)</li><li>External – Two coats of APEX Ultima Paints over 2 coat of external primer (Primer Range ₹90-100/- Per Lit, APEX Ultima PAINT Range ₹700-750/- Per Lit)</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab11">
+                    <h6>Electrical</h6>
+                    <ul><li>3 Light points per 100 sqft, 1 fan point &amp; 4nos of 5 Amp plug point</li><li>1 Heating point of for Each toilet &amp; kitchen of 15 Amp Plug Point</li><li>Distribution Box of Domestic make.</li><li>AC Points for rooms</li><li>CCTV Provision in Parking</li><li>Finolex silver fireproof wirings and L&amp;T engalze KX2901 switches and&nbsp; sockets</li><li>MCB brand :&nbsp; L&amp;T engalze&nbsp;</li></ul>
+                  </div>
+
+                  <div class="tab-pane fade show" id="v6tab12">
+                    <h6>Miscellaneous</h6>
+                    <ul><li>Underground Water tank up to 13000 liter&nbsp;</li><li>Overhead water tank up to 4000 liter of Sintex / Plasto make&nbsp;</li><li>SS Railings for Internal &amp; External Staircase</li><li>(Range ₹2500/RFT)</li><li>Parapet wall height : 3.5 feet</li></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section py-5" id="Projects">
+      <div class="container">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Our Projects</h2>
+          <p class="text-muted">Recent and completed construction projects</p>
+        </div>
+
+        <!-- Recent Projects -->
+        <h4 class="mb-3">Recent Projects</h4>
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+              <img src="images/1.png" alt="Modern Villa" />
+              <div class="project-overlay">
+                <h5>Modern Villa</h5>
+                <p>Bangalore</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+              <img src="images/2.png" alt="Duplex House" />
+              <div class="project-overlay">
+                <h5>Duplex House</h5>
+                <p>Hyderabad</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+              <img src="images/3.png" alt="Luxury Home" />
+              <div class="project-overlay">
+                <h5>Luxury Home</h5>
+                <p>Pune</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Completed Projects -->
+        <h4 class="mb-3">Completed Projects</h4>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="project-card">
+              <img src="images/4.png" alt="Independent House" />
+              <div class="project-overlay">
+                <h6>Independent House</h6>
+                <p>Chennai</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="project-card">
+              <img src="images/5.png" alt="Row House" />
+              <div class="project-overlay">
+                <h6>Row House</h6>
+                <p>Mysore</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="project-card">
+              <img src="images/6.png" alt="Budget Home" />
+              <div class="project-overlay">
+                <h6>Budget Home</h6>
+                <p>Tumkur</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="project-card">
+              <img src="images/7.png" alt="Premium Villa" />
+              <div class="project-overlay">
+                <h6>Premium Villa</h6>
+                <p>Coimbatore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section py-5" id="About">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="fw-bold mb-3">About Us</h2>
+            <p class="text-muted">
+              We are a trusted construction company specializing in building
+              high-quality residential homes with transparent pricing and
+              premium materials.
+            </p>
+
+            <p>
+              From planning and design to execution and handover, we manage
+              every stage of construction with precision, quality, and
+              commitment. Our experienced engineers, architects, and project
+              managers ensure timely delivery and superior workmanship.
+            </p>
+
+            <ul class="about-list">
+              <li>
+                <i class="bi bi-check-circle-fill"></i> End-to-end construction
+                solutions
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Transparent pricing &
+                quality materials
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> On-time project delivery
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Dedicated project
+                management
+              </li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary mt-3"
+              >Get Free Consultation</a
+            >
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-6">
+            <div class="about-image">
+              <img src="images/aboutus.png" alt="Construction Company" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section py-5" id="Contact">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Contact Us</h2>
+          <p class="text-muted">
+            Get in touch for your dream home construction
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Contact Form -->
+          <div class="col-lg-6">
+            <div
+              class="contact-form p-4 rounded shadow-sm"
+              style="
+                background-image: url(&quot;images/contact-bg.jpg&quot;);
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <form
+                onsubmit="
+                  sendWhatsAppMessage(this);
+                  return false;
+                "
+              >
+                <div class="mb-3">
+                  <!-- <label for="name" class="form-label text-white">Name</label> -->
+                  <input
+                    type="text"
+                    class="form-control name"
+                    name="name"
+                    id="name"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="mb-3">
+                  <!-- <label for="email" class="form-label text-white">Email</label> -->
+                  <input
+                    type="email"
+                    class="form-control email"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <!-- <label for="phone" class="form-label text-white">Phone</label> -->
+                  <input
+                    type="tel"
+                    class="form-control phone"
+                    name="phone"
+                    id="phone"
+                    placeholder="Your Phone"
+                  />
+                </div>
+                <div class="mb-3">
+                  <!-- <label for="message" class="form-label text-white">Message</label> -->
+                  <textarea
+                    class="form-control message"
+                    name="message"
+                    id="message"
+                    rows="4"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">
+                  Send on WhatsApp
                 </button>
               </form>
             </div>
           </div>
 
+          <!-- Contact Info -->
+          <div class="col-lg-6">
+            <div class="contact-info p-4 rounded shadow-sm bg-light h-100">
+              <h5 class="mb-3">Our Office</h5>
+              <p>
+                <i class="bi bi-geo-alt-fill me-2"></i>123 Main Street, Your
+                City, State
+              </p>
+              <p><i class="bi bi-telephone-fill me-2"></i>+91 9876543210</p>
+              <p>
+                <i class="bi bi-envelope-fill me-2"></i>info@yourcompany.com
+              </p>
+
+              <h5 class="mt-4 mb-3">Find Us Here</h5>
+              <div class="map-responsive">
+                <!-- Google Map Embed -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18..."
+                  width="100%"
+                  height="250"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-  </div>
-
-  <!-- Services -->
-  <section class="services-section" id="Service">
-    <div class="container">
-
-      <!-- Section Heading -->
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Our Services</h2>
-        <p class="text-muted">
-          Complete construction solutions from planning to handover
-        </p>
-      </div>
-
-      <div class="row g-4">
-
-        <!-- Service 1 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="service-card text-center">
-            <div class="service-icon">🏠</div>
-            <h5>Residential Construction</h5>
-            <p>
-              End-to-end home construction services with quality materials and modern designs.
-            </p>
-          </div>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="service-card text-center">
-            <div class="service-icon">🏢</div>
-            <h5>Commercial Buildings</h5>
-            <p>
-              Office spaces, shops, and commercial buildings delivered on time.
-            </p>
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="service-card text-center">
-            <div class="service-icon">🧱</div>
-            <h5>Renovation & Remodeling</h5>
-            <p>
-              Upgrade, remodel, or expand your existing property with expert planning.
-            </p>
-          </div>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="service-card text-center">
-            <div class="service-icon">📐</div>
-            <h5>Design & Planning</h5>
-            <p>
-              Architectural design, planning approvals, and project estimation services.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Packages -->
-  <!-- Section Heading -->
-  <div class="text-center mb-5 packages-heading" id="Packages">
-    <h2 class="fw-bold">Our Packages</h2>
-    <p class="text-muted">
-      Complete construction solutions from planning to handover
-    </p>
-  </div>
-
-  <div class="packages-grid">
-
-    <!-- Structure -->
-    <div class="package-card">
-      <h5>Structure Package</h5>
-      <h3 class="price">₹1099 <span>/sqft</span></h3>
-      <p class="text-muted">(Incl. GST)</p>
-      <ul>
-        <li>Excavation & Foundation</li>
-        <li>RCC Structure</li>
-        <li>Brick / Block Masonry</li>
-        <li>Steel & Cement</li>
-        <li>Structural Drawings</li>
-      </ul>
-      <a href="#contact" class="btn btn-outline-primary w-100">Enquire Now</a>
-    </div>
-
-    <!-- Basic -->
-    <div class="package-card">
-      <h5>Basic Package</h5>
-      <h3 class="price">₹1499 <span>/sqft</span></h3>
-      <p class="text-muted">(Incl. GST)</p>
-      <ul>
-        <li>Structure Included</li>
-        <li>Plastering</li>
-        <li>Basic Electrical</li>
-        <li>Basic Plumbing</li>
-        <li>Basic Flooring</li>
-      </ul>
-      <a href="#contact" class="btn btn-outline-primary w-100">Enquire Now</a>
-    </div>
-
-    <!-- Standard -->
-    <div class="package-card popular">
-      <h5>Standard Package</h5>
-      <h3 class="price">₹1650 <span>/sqft</span></h3>
-      <p class="text-muted">(Incl. GST)</p>
-      <ul>
-        <li>Vitrified Tiles</li>
-        <li>Branded Switches</li>
-        <li>UPVC Windows</li>
-        <li>Putty Finish</li>
-        <li>Basic Modular Kitchen</li>
-      </ul>
-      <a href="#contact" class="btn btn-warning w-100">Most Popular</a>
-    </div>
-
-    <!-- Premium -->
-    <div class="package-card">
-      <h5>Premium Package</h5>
-      <h3 class="price">₹1899 <span>/sqft</span></h3>
-      <p class="text-muted">(Incl. GST)</p>
-      <ul>
-        <li>Premium Tiles</li>
-        <li>False Ceiling</li>
-        <li>Branded Fittings</li>
-        <li>Premium Door</li>
-        <li>Exterior Paint</li>
-      </ul>
-      <a href="#contact" class="btn btn-outline-primary w-100">Enquire Now</a>
-    </div>
-
-    <!-- Royal -->
-    <div class="package-card">
-      <h5>Royal Package</h5>
-      <h3 class="price">₹2050 <span>/sqft</span></h3>
-      <p class="text-muted">(Incl. GST)</p>
-      <ul>
-        <li>Marble / Wooden Flooring</li>
-        <li>Designer Ceiling</li>
-        <li>Smart Home Wiring</li>
-        <li>Custom Elevation</li>
-        <li>Project Handover</li>
-      </ul>
-      <a href="#contact" class="btn btn-outline-primary w-100">Enquire Now</a>
-    </div>
-
-  </div>
-
-  <section class="package-compare-section">
-    <div class="container">
-
-      <div class="text-center mb-4">
-        <h3 class="fw-bold">Package Comparison</h3>
-        <p class="text-muted">Compare features across construction packages</p>
-      </div>
-
-      <div class="table-responsive">
-        <table class="table table-bordered align-middle text-center">
-          <thead class="table-dark">
-            <tr>
-              <th>Scope of Work</th>
-              <th>Structure<br>₹1099</th>
-              <th>Basic<br>₹1499</th>
-              <th class="table-warning text-dark">Standard<br>₹1650</th>
-              <th>Premium<br>₹1899</th>
-              <th>Royal<br>₹2050</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Foundation & RCC Structure</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-            </tr>
-
-            <tr>
-              <td>Brick / Block Masonry</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-            </tr>
-
-            <tr>
-              <td>Plastering</td>
-              <td>—</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-            </tr>
-
-            <tr>
-              <td>Flooring</td>
-              <td>—</td>
-              <td>Basic</td>
-              <td>Vitrified</td>
-              <td>Premium</td>
-              <td>Marble / Wood</td>
-            </tr>
-
-            <tr>
-              <td>Electrical Wiring</td>
-              <td>—</td>
-              <td>Basic</td>
-              <td>Branded</td>
-              <td>Premium</td>
-              <td>Premium + Smart</td>
-            </tr>
-
-            <tr>
-              <td>Plumbing</td>
-              <td>—</td>
-              <td>Basic</td>
-              <td>Standard</td>
-              <td>Branded</td>
-              <td>Premium</td>
-            </tr>
-
-            <tr>
-              <td>False Ceiling</td>
-              <td>—</td>
-              <td>—</td>
-              <td>—</td>
-              <td>Selected Areas</td>
-              <td>Designer</td>
-            </tr>
-
-            <tr>
-              <td>Kitchen</td>
-              <td>—</td>
-              <td>—</td>
-              <td>Basic Modular</td>
-              <td>Premium Modular</td>
-              <td>Designer Modular</td>
-            </tr>
-
-            <tr>
-              <td>Elevation Design</td>
-              <td>Basic</td>
-              <td>Standard</td>
-              <td>Modern</td>
-              <td>Premium</td>
-              <td>Custom</td>
-            </tr>
-
-            <tr>
-              <td>Project Management</td>
-              <td>—</td>
-              <td>—</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-            </tr>
-
-            <tr>
-              <td>Handover Support</td>
-              <td>—</td>
-              <td>—</td>
-              <td>—</td>
-              <td>✔</td>
-              <td>✔</td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Packages Section -->
-  <section class="packages-section py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Our Packages</h2>
-        <p class="text-muted">
-          Complete construction solutions from planning to handover
-        </p>
-      </div>
-      <!-- Top Package Tabs -->
-      <ul class="nav nav-tabs justify-content-center mb-4" id="packageTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="structure-tab" data-bs-toggle="tab" data-bs-target="#structure"
-            type="button" role="tab">Structure ₹1099</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="basic-tab" data-bs-toggle="tab" data-bs-target="#basic" type="button"
-            role="tab">Basic ₹1499</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="standard-tab" data-bs-toggle="tab" data-bs-target="#standard" type="button"
-            role="tab">Standard ₹1650</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="premium-tab" data-bs-toggle="tab" data-bs-target="#premium" type="button"
-            role="tab">Premium ₹1899</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="royal-tab" data-bs-toggle="tab" data-bs-target="#royal" type="button"
-            role="tab">Royal ₹2050</button>
-        </li>
-      </ul>
-
-      <!-- Package Content -->
-      <div class="tab-content" id="packageTabsContent">
-
-        <!-- Structure Package -->
-        <div class="tab-pane fade show active" id="structure" role="tabpanel">
-          <!--  Structure Left Menu -->
-          <div class="row">
-            <!-- Left Icon + Label Menu -->
-            <div class="col-lg-2">
-              <ul class="nav flex-column package-menu" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#EarthWork_s">
-                    <i class="bi bi-shield-fill"></i> Earth Work
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Structure_s">
-                    <i class="bi bi-building"></i> Structure
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Miscellaneous_s">
-                    <i class="bi bi-grid-1x2"></i> Miscellaneous
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- Right Side Content -->
-            <div class="col-lg-10">
-              <div class="tab-content">
-
-                <!-- Earth Work Structure -->
-                <div class="tab-pane fade active show" id="EarthWork_s">
-                  <h6>Earth Work</h6>
-                  <ul>
-                    <li>Excavation in hard/ soft soil for foundation, and removing the excavated earth up to 5 feet in
-                      hard strata.</li>
-                    <li>In situations where space is limited and it’s not possible to store excavated soil on-site for
-                      construction purposes, there will be an extra fee for the provision of replacement soil. This
-                      additional charge will be Rs2000 per tractor load for distances of up to 6 kilometers from the
-                      construction site.</li>
-                  </ul>
-                </div>
-
-                <!-- Structure Structure-->
-                <div class="tab-pane fade" id="Structure_s">
-                  <h6>Structure</h6>
-                  <ul>
-                    <li><strong>Steel:</strong> Kalika, Trishul or equivalent brand. (TMT 500 or 550 grade Reinforcement
-                      Steel to be
-                      provided at 3.25 kgs/sqft of built-up area. All Steel designs are as per Structural engineer‘s
-                      drawing)</li>
-                    <li><strong>Cement:</strong> Birla Super, UltraTech or equivalent Brand(53 Grade for Concrete works
-                      &amp; 43 Grade for
-                      other works)</li>
-                    <li>RMC</li>
-                    <li>PCC Works of M15 Grade 1 : 2 :4</li>
-                    <li>RCC Works of M25 Grade for Column Footing, Plinth Beams, Columns and Roof Slabs. Thickness of
-                      roof slab shall be
-                      5” thick</li>
-                    <li>RCC Works of M25 Grade for Lintel, Canopy Projections, Staircase</li>
-                    <li>Column Sizes will be of 9”x18” min</li>
-                    <li>Soil testing (SBC of 220kN/m2 at 5’ depth from EGL)</li>
-                    <li>Water Proofing: Dr. Fixit</li>
-                    <li>Roof to Roof Height to be 11’0”</li>
-                    <li>9” Red Bricks for Exterior &amp; 6” for Interior</li>
-                    <li>Chicken Mesh will be used near beam, column, and masonry wall junction&nbsp;</li>
-                  </ul>
-                </div>
-
-                <!-- Miscellaneous Structure-->
-                <div class="tab-pane fade" id="Miscellaneous_s">
-                  <h6>Miscellaneous</h6>
-                  <ul>
-                    <li>Underground Water tank up to 10000 liter </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> <!-- Structure Package Tab Pane -->
-
-        <!-- Basic Package -->
-        <div class="tab-pane fade" id="basic" role="tabpanel">
-
-          <div class="row">
-            <!-- Left Icon + Label Menu -->
-            <div class="col-lg-2">
-              <ul class="nav flex-column package-menu" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#DesignsandLayouts_b">
-                    <i class="bi bi-columns"></i> Designs and Layouts
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#EarthWork_b">
-                    <i class="bi bi-house"></i> Earth Work
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Structure_b">
-                    <i class="bi bi-buildings"></i> Structure
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Flooring_b">
-                    <i class="bi bi-grid-1x2"></i> Flooring
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#KitchenCounter_b">
-                    <i class="bi bi-grid-1x2"></i> Kitchen Counter
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Bathroom_b">
-                    <i class="fa-solid fa-sink"></i>
-                     Bathroom
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Door_b">
-                    <i class="bi bi-door-open"></i> Door Frames with Fitting
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Window_b">
-                    <i class="bi bi-grid-1x2"></i> Window
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Plumbing_b">
-                    <i class="bi bi-grid-1x2"></i> Plumbing & Sanitation Lines
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Electrical_b">
-                    <i class="bi bi-grid-1x2"></i> Electrical
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#Miscellaneous_b">
-                    <i class="bi bi-grid-1x2"></i> Miscellaneous
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- Right Side Content -->
-            <div class="col-lg-10">
-              <div class="tab-content">
-
-                <!-- DesignsandLayouts_basic -->
-                <div class="tab-pane fade active show" id="DesignsandLayouts_b">
-                  <h6>Designs and Layouts</h6>
-                  <ul>
-                    <li>Architectural floor plan </li>
-                    <li>3D Elevation </li>
-                    <li>Electrical layout</li>
-                    <li>Plumbing layout </li>
-                    <li>Brickwork layout </li>
-                    <li>Working Drawings </li>
-                    <li>Structural Drawings </li>
-                  </ul>
-                </div>
-
-                <div class="tab-pane fade" id="EarthWork_b">
-                  <h6>Earth Work</h6>
-                  <ul>
-                    <li>Excavation in hard/ soft soil for foundation, and removing the excavated earth up to 5 feet in
-                      hard strata.</li>
-                    <li>In situations where space is limited and it’s not possible to store excavated soil on-site for
-                      construction purposes, there will be an extra fee for the provision of replacement soil. This
-                      additional charge will be Rs2000 per tractor load for distances of up to 6 kilometers from the
-                      construction site.</li>
-                    <li>Plinth height will be 1. 5 feet</li>
-                  </ul>
-                </div>
-
-                <div class="tab-pane fade" id="Structure_b">
-                  <h6>Structure</h6>
-                  <ul>
-                    <li><strong>Steel:</strong> Icon, Trishul or equivalent brand. (TMT 500 or 550 grade Reinforcement
-                      Steel to be provided at 3 kgs/sqft of built-up area. All Steel designs are as per Structural
-                      engineer‘s drawing)</li>
-                    <li><strong>Cement:</strong> JK Super, Chettinad or equivalent Brand(53 Grade for Concrete works
-                      &amp; 43 Grade for other works)</li>
-                    <li>RMC</li>
-                    <li>PCC Works of M15 Grade 1 : 2 :4</li>
-                    <li>RCC Works of M25 Grade for Column Footing, Plinth Beams, Columns and Roof Slabs. Thickness of
-                      roof slab shall be 5” thick</li>
-                    <li>RCC Works of M25 Grade for Lintel, Canopy Projections, Staircase</li>
-                    <li>Column Sizes will be of 9”x18” min</li>
-                    <li>Soil testing (SBC of 220kN/m2 at 5’ depth from EGL)</li>
-                    <li>Water Proofing: Dr. Fixit</li>
-                    <li>Roof to Roof Height to be 10’0”</li>
-                    <li>6” Red Bricks for Exterior &amp; 4” for Interior</li>
-                    <li>Chicken Mesh will be used near beam, column, and masonry wall junction&nbsp;</li>
-                  </ul>
-                </div>
-
-                <div class="tab-pane fade" id="Flooring_b">
-                  <h6>Flooring</h6>
-                  <ul>
-                    <li>Vitrified flooring of ₹50/sqft (@MRP)will be provided for Living Room, Kitchen&nbsp; &amp;&nbsp;
-                      bedrooms</li>
-                    <li>Providing the all inside windows and doors with Granite frame up to of ₹75/sqft(@MRP)</li>
-                    <li>Granite flooring will be provided for Staircase (trades and riser)&nbsp; of ₹75/sqft(@MRP)</li>
-                    <li>Ceramic Tiles for Balcony &amp; Utility Flooring of ₹40/sqft(@MRP)</li>
-                    <li>Ceramic Tiles for Parking Flooring of ₹40/sqft(@MRP)</li>
-                    <li>20mm Granite will be half round nosing for staircase and skirting</li>
-                  </ul>
-                </div>
-
-                <div class="tab-pane fade" id="KitchenCounter_b">
-                  <h6>Kitchen Counter</h6>
-                  <ul>
-                    <li>Providing 4’0” feet height Glazed tiles (₹45/sqft) over 20mm thick, kitchen otta granite top
-                      upto of ₹125/sqft(@MRP) and rest on polish kadappa fixing with SS sink of size 18”x21” up to
-                      ₹3000(@MRP)</li>
-                    <li>BIB Cock : ₹700</li>
-                    <li>Main Sink Faucet : ₹1500</li>
-                  </ul>
-                </div>
-
-                <div class="tab-pane fade" id="Bathroom_b">
-                  <h6>Bathroom</h6>
-                  <ul>
-                    <li>Anti-skid Ceramic flooring for Toilets at ₹40/sft(@MRP)</li>
-                    <li>Dadoing Works – 7’ Height – Cost of Tile at ₹40/sft(@MRP)</li>
-                    <li>Bathroom Fittings –&nbsp;<strong>₹30,000 @MRP</strong> for (per 1000 sqft) each Bathroom
-                      includes Floor Mounted Closet, Washbasin &amp; CP fittings of Hindware, Parry Ware or equivalent
-                      make.</li>
-                  </ul>
-                </div>
-
-                <div class="tab-pane fade" id="Door_b">
-                  <h6>Door Frames with Fitting</h6>
-                  <ul>
-                    <li>Main Door –Providing Teakwood frame for main door with laminated door @ ₹20000/- (@MRP) Veneer
-                    </li>
-                    <li>Bedroom Doors – Providing All internal Bedrooms Doors of laminated door @ ₹7000/- (@MRP)</li>
-                    <li>Bathroom Doors – For bathroom FRP doors @ ₹5000/- (@MRP)</li>
-                  </ul>
-                </div>
-
-                <div class="tab-pane fade" id="Window_b">
-                  <h6>Window</h6>
-                  <ul><li>Aluminum window: ₹220/sqft(@ MRP) with powder coated 3 track type, Design 4 mm glass&nbsp;</li><li>Window grill ₹140/ sqft(@ MRP) for Vertical and Horizantal Bar Design</li></ul>
-                </div>
-
-
-                <div class="tab-pane fade" id="Plumbing_b">
-                  <h6>Plumbing & Sanitation Lines</h6>
-                  <ul>
-                    <li>Providing all plumbing work are concealed<br>by PVC/UPVC material ( Prince, Ashirwadh Company).
-                    </li>
-                    <li>Sanitary fittings and CP fitting of up to ₹30000/bathroom (per 1000 sqft)&nbsp; are provided
-                      with premium-quality</li>
-                  </ul>
-                </div>
-
-
-                <div class="tab-pane fade" id="Painting_b">
-                  <h6>Painting</h6>
-                  <ul>
-                    <li>Internal Walls and Ceilings- Two coats of Tractor Emulsion, ASIAN PAINT: over 2 coat of primer
-                      &amp; 2 coats of J.K putty (OBD Range ₹110-120/- Per Lit)</li>
-                    <li>External – Two coats of ACE of ASIAN Paints over 1 coat of external primer (Primer Range
-                      ₹45-50/- Per Lit, ACE PAINT Range ₹110-120/- Per Lit)</li>
-                  </ul>
-                </div>
-
-
-                <div class="tab-pane fade" id="Electrical_b">
-                  <h6>Electrical</h6>
-                  <ul>
-                    <li>Internal Walls and Ceilings- Two coats of Tractor Emulsion, ASIAN PAINT: over 2 coat of primer
-                      &amp; 2 coats of J.K putty (OBD Range ₹110-120/- Per Lit)</li>
-                    <li>External – Two coats of ACE of ASIAN Paints over 1 coat of external primer (Primer Range
-                      ₹45-50/- Per Lit, ACE PAINT Range ₹110-120/- Per Lit)</li>
-                  </ul>
-                </div>
-
-                <div class="tab-pane fade" id="Miscellaneous_b">
-                  <h6>Miscellaneous</h6>
-                  <ul><li>Underground Water tank up to 4000 liter&nbsp;</li><li>Overhead water tank up to 2000 liter of Sintex / Plasto make&nbsp;</li><li>SS Railings for Internal &amp; External Staircase</li><li>(Range up to ₹200/- per RFT)</li><li>Parapet Wall Height : 3.5 ft</li></ul>
-                </div>
-              </div>
-            </div>
-
-          </div> <!-- row -->
-        </div> <!-- Structure Package Tab Pane -->
-
-
-      </div> <!-- packageTabsContent -->
-
-    </div>
-  </section>
-
-  <section class="projects-section py-5" id="Projects">
-  <div class="container">
-
-    <!-- Section Heading -->
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Our Projects</h2>
-      <p class="text-muted">Recent and completed construction projects</p>
-    </div>
-
-    <!-- Recent Projects -->
-    <h4 class="mb-3">Recent Projects</h4>
-    <div class="row g-4 mb-5">
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project-card">
-          <img src="images/1.png" alt="Modern Villa">
-          <div class="project-overlay">
-            <h5>Modern Villa</h5>
-            <p>Bangalore</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project-card">
-          <img src="images/2.png" alt="Duplex House">
-          <div class="project-overlay">
-            <h5>Duplex House</h5>
-            <p>Hyderabad</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="project-card">
-          <img src="images/3.png" alt="Luxury Home">
-          <div class="project-overlay">
-            <h5>Luxury Home</h5>
-            <p>Pune</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Completed Projects -->
-    <h4 class="mb-3">Completed Projects</h4>
-    <div class="row g-4">
-
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="project-card">
-          <img src="images/4.png" alt="Independent House">
-          <div class="project-overlay">
-            <h6>Independent House</h6>
-            <p>Chennai</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="project-card">
-          <img src="images/5.png" alt="Row House">
-          <div class="project-overlay">
-            <h6>Row House</h6>
-            <p>Mysore</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="project-card">
-          <img src="images/6.png" alt="Budget Home">
-          <div class="project-overlay">
-            <h6>Budget Home</h6>
-            <p>Tumkur</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="project-card">
-          <img src="images/7.png" alt="Premium Villa">
-          <div class="project-overlay">
-            <h6>Premium Villa</h6>
-            <p>Coimbatore</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section class="about-section py-5" id="About">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <!-- Left Content -->
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <h2 class="fw-bold mb-3">About Us</h2>
-        <p class="text-muted">
-          We are a trusted construction company specializing in building high-quality
-          residential homes with transparent pricing and premium materials.
-        </p>
-
-        <p>
-          From planning and design to execution and handover, we manage every stage
-          of construction with precision, quality, and commitment. Our experienced
-          engineers, architects, and project managers ensure timely delivery and
-          superior workmanship.
-        </p>
-
-        <ul class="about-list">
-          <li><i class="bi bi-check-circle-fill"></i> End-to-end construction solutions</li>
-          <li><i class="bi bi-check-circle-fill"></i> Transparent pricing & quality materials</li>
-          <li><i class="bi bi-check-circle-fill"></i> On-time project delivery</li>
-          <li><i class="bi bi-check-circle-fill"></i> Dedicated project management</li>
-        </ul>
-
-        <a href="#contact" class="btn btn-primary mt-3">Get Free Consultation</a>
-      </div>
-
-      <!-- Right Image -->
-      <div class="col-lg-6">
-        <div class="about-image">
-          <img src="images/aboutus.png" alt="Construction Company">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="contact-section py-5" id="Contact">
-  <div class="container">
-
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Contact Us</h2>
-      <p class="text-muted">Get in touch for your dream home construction</p>
-    </div>
-
-    <div class="row g-4">
-      <!-- Contact Form -->
-      <div class="col-lg-6">
-        <div class="contact-form p-4 rounded shadow-sm" style="background-image: url('images/contact-bg.jpg'); background-size: cover; background-position: center;">
-          <form onsubmit="sendWhatsAppMessage(this); return false;">
-            <div class="mb-3">
-              <!-- <label for="name" class="form-label text-white">Name</label> -->
-              <input type="text" class="form-control name" name="name" id="name" placeholder="Your Name">
-            </div>
-            <div class="mb-3">
-              <!-- <label for="email" class="form-label text-white">Email</label> -->
-              <input type="email" class="form-control email" name="email" id="email" placeholder="Your Email">
-            </div>
-            <div class="mb-3">
-              <!-- <label for="phone" class="form-label text-white">Phone</label> -->
-              <input type="tel" class="form-control phone" name="phone" id="phone" placeholder="Your Phone">
-            </div>
-            <div class="mb-3">
-              <!-- <label for="message" class="form-label text-white">Message</label> -->
-              <textarea class="form-control message" name="message" id="message" rows="4" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-success">Send on WhatsApp</button>
-
-          </form>
-        </div>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-lg-6">
-        <div class="contact-info p-4 rounded shadow-sm bg-light h-100">
-          <h5 class="mb-3">Our Office</h5>
-          <p><i class="bi bi-geo-alt-fill me-2"></i>123 Main Street, Your City, State</p>
-          <p><i class="bi bi-telephone-fill me-2"></i>+91 9876543210</p>
-          <p><i class="bi bi-envelope-fill me-2"></i>info@yourcompany.com</p>
-
-          <h5 class="mt-4 mb-3">Find Us Here</h5>
-          <div class="map-responsive">
-            <!-- Google Map Embed -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2026 MySite. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="js/bootstrap.bundle.min.js"></script>
-
-  <!-- Custom JS -->
-  <!-- <script src="js/script.js"></script> -->
-   <script>
-    function sendWhatsAppMessage(form) {
-      const data = new FormData(form);
-
-      const name = data.get("name") || "";
-      const phone = data.get("phone") || "";
-      // const location = data.get("location") || "";
-      const message = data.get("message") || "";
-      // const name = document.getElementsByClassName("name").value;
-      // const phone = document.getElementsByClassName("phone").value;
-      // const message = document.getElementsByClassName("message").value;
-      const email = data.get("email");
-      const whatsappNumber = "9823195457"; // your number
-
-      const text = `Hello, I am ${name}. Want to connect with you regarding construction query.%0A
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">© 2026 MySite. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <!-- <script src="js/script.js"></script> -->
+    <script>
+      function sendWhatsAppMessage(form) {
+        const data = new FormData(form);
+
+        const name = data.get("name") || "";
+        const phone = data.get("phone") || "";
+        // const location = data.get("location") || "";
+        const message = data.get("message") || "";
+        // const name = document.getElementsByClassName("name").value;
+        // const phone = document.getElementsByClassName("phone").value;
+        // const message = document.getElementsByClassName("message").value;
+        const email = data.get("email");
+        const whatsappNumber = "9823195457"; // your number
+
+        const text = `Hello, I am ${name}. Want to connect with you regarding construction query.%0A
 Phone: ${phone}%0A
 Email: ${email}%0A
 Message: ${message}`;
 
-      const url = `https://wa.me/${whatsappNumber}?text=${text}`;
-      window.open(url, "_blank");
-    }
+        const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+        window.open(url, "_blank");
+      }
     </script>
-
-
-</body>
-
+  </body>
 </html>
