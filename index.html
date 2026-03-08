@@ -2084,7 +2084,7 @@ Message: ${message}`;
       /* run after page loads */
       document.addEventListener("DOMContentLoaded", setupMobileTabs);
     </script> -->
-    <script>
+    <!-- <script>
 document.addEventListener("DOMContentLoaded", function () {
 
   if (window.innerWidth < 768) {
@@ -2102,7 +2102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const mobileContent = pane.cloneNode(true);
       mobileContent.classList.add("mobile-tab-content");
       mobileContent.style.display = "none";
-
+      
       tab.insertAdjacentElement("afterend", mobileContent);
 
       // show active tab content on load
@@ -2126,6 +2126,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   }
+
+});
+</script> -->
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+if (window.innerWidth <= 768){
+
+document.querySelectorAll(".packages-section .tab-pane").forEach(function(packagePane){
+
+let tabs = packagePane.querySelectorAll(".nav-pills .nav-link");
+
+tabs.forEach(function(tab){
+
+let id = tab.getAttribute("href");
+let pane = packagePane.querySelector(id);
+
+if(!pane) return;
+
+/* move content below tab */
+tab.insertAdjacentElement("afterend", pane);
+
+/* hide by default */
+pane.style.display="none";
+
+/* click toggle */
+tab.addEventListener("click", function(e){
+
+e.preventDefault();
+
+/* hide other contents in same package */
+packagePane.querySelectorAll(".tab-pane").forEach(function(p){
+if(p !== packagePane){
+p.style.display="none";
+}
+});
+
+pane.style.display="block";
+
+});
+
+});
+
+/* show active tab on load */
+let active = packagePane.querySelector(".nav-pills .nav-link.active");
+
+if(active){
+let pane = packagePane.querySelector(active.getAttribute("href"));
+if(pane){
+pane.style.display="block";
+}
+}
+
+});
+
+}
 
 });
 </script>
