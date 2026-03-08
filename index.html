@@ -2057,7 +2057,7 @@ Message: ${message}`;
         window.open(url, "_blank");
       }
     </script>
-    <script>
+    <!-- <script>
       function setupMobileTabs() {
         if (window.innerWidth < 768) {
           document
@@ -2083,6 +2083,51 @@ Message: ${message}`;
 
       /* run after page loads */
       document.addEventListener("DOMContentLoaded", setupMobileTabs);
-    </script>
+    </script> -->
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  if (window.innerWidth < 768) {
+
+    const tabs = document.querySelectorAll(".packages-section .nav-pills .nav-link");
+
+    tabs.forEach(function(tab){
+
+      const target = tab.getAttribute("href");
+      const pane = document.querySelector(target);
+
+      if(!pane) return;
+
+      // create mobile copy
+      const mobileContent = pane.cloneNode(true);
+      mobileContent.classList.add("mobile-tab-content");
+      mobileContent.style.display = "none";
+
+      tab.insertAdjacentElement("afterend", mobileContent);
+
+      // show active tab content on load
+      if(tab.classList.contains("active")){
+        mobileContent.style.display = "block";
+      }
+
+      // click behaviour
+      tab.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        document.querySelectorAll(".mobile-tab-content").forEach(c=>{
+          c.style.display="none";
+        });
+
+        mobileContent.style.display = "block";
+
+      });
+
+    });
+
+  }
+
+});
+</script>
   </body>
 </html>
