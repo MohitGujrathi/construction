@@ -222,55 +222,38 @@ text-align:center;
 
 
 
-/* MOBILE VIEW */
-@media (max-width:768px){
+@media(max-width:768px){
 
-/* stack columns */
 .packages-section .row{
 flex-direction:column;
 }
 
-.packages-section .col-3,
-.packages-section .col-9{
-width:100%;
-max-width:100%;
-}
-
-/* make vertical tabs full width */
-.packages-section .nav.flex-column{
+.packages-section .col-md-3,
+.packages-section .col-md-9{
 width:100%;
 }
 
-/* tab button style */
 .packages-section .nav-pills .nav-link{
 width:100%;
-margin-bottom:5px;
 border:1px solid #ddd;
+margin-bottom:5px;
 border-radius:6px;
-text-align:left;
+}
+.nav-pills .nav-link{
+display:block;
+width:100%;
+border:1px solid #ddd;
+margin-bottom:5px;
+border-radius:6px;
 }
 
-/* show content under tab */
-.packages-section .tab-content{
-margin-top:10px;
-}
-
-/* optional accordion feel */
-.packages-section .tab-pane{
-border:1px solid #eee;
+.tab-pane{
 padding:10px;
+border:1px solid #eee;
 border-radius:6px;
 margin-bottom:10px;
 }
 
-}
-#mainTabs{
-overflow-x:auto;
-flex-wrap:nowrap;
-}
-
-#mainTabs .nav-link{
-white-space:nowrap;
 }
 
 @media (max-width: 768px) {
